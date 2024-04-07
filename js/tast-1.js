@@ -93,7 +93,32 @@
 // менше з чисел a, b
 // Потрібно додати перевірку, що функція отримує числа
 
-function min(a, b) {
-  return Math.min(a, b);
-}
-console.log(min(5, 9));
+// function min(a = 10, b = 5) {
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     return 'Not a number';
+//   }
+//   return Math.min(a, b);
+// }
+// console.log(min(7, 20));
+
+//TODO:=========task-06=================
+//Напишіть функцію calculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+// function calculateAverage() {
+//   let total = 0;
+//   let count = 0;
+//   for (const arg of arguments) {
+//     if (typeof arg !== 'number') {
+//       continue;
+//     }
+//     total += arg;
+//     count += 1;
+//   }
+//   return Math.floor(total / count);
+// }
+// console.log(calculateAverage(2, 20, 45));
+// console.log(calculateAverage(4, 5, 10, 20, 30));
+// console.log(calculateAverage(5, 5, 5, 5, '5'));
