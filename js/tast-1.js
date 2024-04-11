@@ -122,3 +122,91 @@
 // console.log(calculateAverage(2, 20, 45));
 // console.log(calculateAverage(4, 5, 10, 20, 30));
 // console.log(calculateAverage(5, 5, 5, 5, '5'));
+
+// * Літерал об'єкта
+//TODO:============task-1=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+// const human = {
+//   userName: 'Bob',
+//   hobby: 'Football',
+//   age: 30,
+//   greet() {
+//     console.log(`hello ${this.userName}`);
+//   },
+// };
+// console.log(human.userName);
+// console.log(human.greet());
+// console.log(human['age']);
+// console.log(human['hobby']);
+// human.mood = 'happy';
+// human.hobby = 'skydiving';
+// console.log(human);
+// console.log(human.hobby);
+
+// const newHuman = Object.create(human);
+// newHuman.userName = 'Mango';
+// // console.log(newHuman);
+// // console.log(newHuman.greet());
+
+// // window.console.log(1);
+
+// for (const key in newHuman) {
+//   if (newHuman.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+//TODO:============task-2==============================================
+// 4. Створіть об'єкт "кошик" зі списком товарів та їх цін. Напишіть метод "calculateTotal", який буде обчислювати загальну суму товарів у кошику.
+
+// const cart = {
+//   products: ['apple', 'banana', 'kivi'],
+//   price: [30, 70, 60],
+//   calculateTotal() {
+//     let total = 0;
+//     for (const num of this.price) {
+//       total += num;
+//     }
+//     return total;
+//   },
+// };
+// console.log(cart.calculateTotal());
+
+//TODO:============task-3==============================================
+// Створіть об'єкт "bankAccount" з властивостями "ownerName", "accountNumber", "balance".
+//  Додайте до об'єкту метод "deposit", який дозволяє додавати гроші на рахунок,
+//  та метод "withdraw", який дозволяє знімати гроші з рахунку.
+//  Методи повинні спрацьовувати при натисканні на кнопки “поповнити рахунок”
+// та отримати ‘готівку’ відповідно.Після проведення операції виводити повідомлення про залишок на рахунку.
+
+// const bankAccount = {
+//   ownerName: '',
+//   accountNumber: null,
+//   balance: 0,
+//   deposit(sum) {
+//     this.balance += sum;
+//     return `Ваш рахунок поповнено на сумму: ${sum}$, Ваш баланс складає ${this.balance}$`;
+//   },
+//   withGrow(sum) {
+//     if (this.balance < sum) {
+//       return 'Недостатньо коштів';
+//     }
+//     this.balance -= sum;
+//     return `Знято: ${sum}$, Ваш баланс складає ${this.balance}$`;
+//   },
+// };
+
+// // console.log(bankAccount.deposit(1000));
+// // console.log(bankAccount.withGrow(1000));
+
+// const userAndrii = Object.create(bankAccount);
+// userAndrii.ownerName = 'Andrii';
+// userAndrii.accountNumber = 1;
+// userAndrii.balance = 1000;
+// // console.log(userAndrii);
+// console.log(userAndrii.deposit(1000));
+// console.log(userAndrii.withGrow(200));
